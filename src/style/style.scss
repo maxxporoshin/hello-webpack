@@ -1,0 +1,19 @@
+@import "mixins";
+
+.parent {
+  display: flex;
+
+  @include children(black);
+}
+
+.evil-parent {
+  display: inline;
+
+  @include children(red);
+}
+
+.child {
+  width: 100px;
+  height: 100px;
+  margin: 20px;
+}

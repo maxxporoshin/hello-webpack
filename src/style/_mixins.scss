@@ -1,0 +1,9 @@
+@mixin children($color) {
+  .child {
+    border: 1px solid $color;
+
+    &.filled {
+      background-color: $color;
+    }
+  }
+}

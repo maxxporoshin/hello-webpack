@@ -1,0 +1,33 @@
+{
+  "name": "kost",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:all": "npm run build:dist; npm run build:html; npm run build:sass",
+    "build:dist": "mkdir dist",
+    "build:sass": "sass src/style/style.scss dist/style.css --sourcemap=none",
+    "build:html": "cp src/index.html dist/index.html",
+    "sass:watch": "sass --watch \"src/style/style.scss\":\"dist/style.css\" --sourcemap=none",
+    "clean": "rm -rf dist",
+    "build": "webpack",
+    "build:watch": "webpack --watch --progress",
+    "start:dev": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "css-loader": "^1.0.0",
+    "file-loader": "^2.0.0",
+    "node-sass": "^4.9.3",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.9"
+  }
+}
